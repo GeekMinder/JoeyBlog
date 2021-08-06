@@ -5,7 +5,7 @@
         <header class="blog-container-header">
             <div>
                 <span>{{ whichClass }}版</span>
-                <Icon type="tech" />
+                <Icon :type="this.routeInfo.categoryId" />
             </div>
             <div>
                 <router-link :to="{ name: 'BlogClassification' }">
