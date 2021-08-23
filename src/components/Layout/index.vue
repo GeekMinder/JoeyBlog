@@ -6,9 +6,9 @@
         <div class="right">
             <slot name="right"></slot>
         </div>
-<!--        <div class="right">-->
-<!--            <slot name="right"></slot>-->
-<!--        </div>-->
+        <!--        <div class="right">-->
+        <!--            <slot name="right"></slot>-->
+        <!--        </div>-->
     </div>
 </template>
 
@@ -24,8 +24,7 @@ export default {};
     width: 100%;
     height: 100%;
     display: flex;
-    .left
-     {
+    .left {
         width: 33%;
         flex: 0 0 auto;
         overflow: hidden;
@@ -33,7 +32,6 @@ export default {};
     .right {
         flex: 1 1 auto;
         overflow-y: scroll;
-
     }
 }
 </style>

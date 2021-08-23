@@ -18,7 +18,16 @@
         <div class="blog-main">
             <ul>
                 <li v-for="(item, i) in data.rows" :key="i">
-                    <BlogCard :blogData="item" />
+                    <router-link
+                        :to="{
+                            name: 'Article',
+                            params: {
+                                id: item.id,
+                            },
+                        }"
+                    >
+                        <BlogCard :blogData="item" />
+                    </router-link>
                 </li>
             </ul>
         </div>

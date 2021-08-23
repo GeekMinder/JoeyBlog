@@ -7,7 +7,16 @@
         <div class="blog-card">
             <ul>
                 <li v-for="(item, i) in fiveBlogs" :key="i">
-                    <BlogCard :blogData="item" />
+                    <router-link
+                        :to="{
+                            name: 'Article',
+                            params: {
+                                id: item.id,
+                            },
+                        }"
+                    >
+                        <BlogCard :blogData="item" />
+                    </router-link>
                 </li>
             </ul>
         </div>

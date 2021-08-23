@@ -1,9 +1,9 @@
 <template>
     <ul class="func-ul">
         <li class="data-subtitle">
-            <router-link :to="{name:'Home'}" href="#">
+            <router-link :to="{ name: 'Home' }">
                 <div class="icon">
-                    <Icon type="home"/>
+                    <Icon type="home" />
                 </div>
             </router-link>
             <div class="pop">
@@ -11,11 +11,10 @@
             </div>
         </li>
         <li class="data-subtitle">
-            <router-link :to="{name:'Messages'}" href="#">
+            <router-link :to="{ name: 'Messages' }">
                 <div class="icon">
-                    <Icon type="message"/>
+                    <Icon type="message" />
                 </div>
-
             </router-link>
             <div class="pop">
                 <span>留言板</span>
@@ -24,7 +23,7 @@
         <li class="data-subtitle">
             <a href="#">
                 <div class="icon">
-                    <Icon type="subRSS"/>
+                    <Icon type="subRSS" />
                 </div>
             </a>
             <div class="pop">
@@ -32,9 +31,10 @@
             </div>
         </li>
         <li class="data-subtitle">
-            <a href="#">
+            <a>
+                <!-- TODO 切换字体 -->
                 <div class="icon">
-                    <Icon type="switchFont"/>
+                    <Icon type="switchFont" />
                 </div>
             </a>
             <div class="pop">
@@ -44,7 +44,7 @@
         <li class="data-subtitle">
             <a href="#">
                 <div class="icon">
-                    <Icon type="nightMode"/>
+                    <Icon type="nightMode" />
                 </div>
             </a>
             <div class="pop">
@@ -54,7 +54,7 @@
         <li class="data-subtitle" @click="handleFullScreen">
             <a>
                 <div class="icon">
-                    <Icon type="fullScreen"/>
+                    <Icon type="fullScreen" />
                 </div>
             </a>
             <div class="pop">
@@ -71,8 +71,8 @@ export default {
     components: {
         Icon,
     },
-    methods:{
-        handleFullScreen(){
+    methods: {
+        handleFullScreen() {
             let element = document.documentElement;
             // 判断是否已经是全屏
             // 如果是全屏，退出
@@ -86,7 +86,8 @@ export default {
                 } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
-            } else {    // 否则，进入全屏
+            } else {
+                // 否则，进入全屏
                 if (element.requestFullscreen) {
                     element.requestFullscreen();
                 } else if (element.webkitRequestFullScreen) {
@@ -100,8 +101,8 @@ export default {
             }
             // 改变当前全屏状态
             this.fullscreen = !this.fullscreen;
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -142,14 +143,12 @@ export default {
     // font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 3px 18px rgb(0 0 0 / 20%);
-    border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.45) rgba(255, 255, 255, 0.55);
+    border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.45)
+        rgba(255, 255, 255, 0.55);
 
-    &:hover{
-        background-color: rgba(255,255,255,0.5);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
     }
-}
-
-.data-subtitle::after {
 }
 
 .icon {
@@ -174,7 +173,6 @@ export default {
         //height: 12px;
         font-size: 10px;
         line-height: 10px;
-
     }
 
     //&::after{
@@ -184,5 +182,4 @@ export default {
     //    transform: translateX(-50%)
     //}
 }
-
 </style>

@@ -19,7 +19,6 @@
                     <span>技术</span>
                     <Icon type="tech" />
                 </router-link>
-                <!-- TODO 数字bug  -->
                 <span>技术区现在拥有{{ blogNumbers.tech }}篇博客啦</span>
             </div>
             <!--            生活分类-->
@@ -30,7 +29,6 @@
                     <span>生活</span>
                     <Icon type="life" />
                 </router-link>
-                <!-- TODO 数字bug  -->
                 <span>生活区现在拥有{{ blogNumbers.life }}篇博客啦</span>
             </div>
         </div>

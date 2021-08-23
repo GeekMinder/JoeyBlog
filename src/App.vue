@@ -3,7 +3,7 @@
         <Layout>
             <template #left>
                 <div class="personal-profile">
-                    <PersonalProfileContainer/>
+                    <PersonalProfileContainer />
                 </div>
             </template>
             <template #right>
@@ -33,7 +33,7 @@ export default {
 }
 
 .personal-profile {
-    //width: 500px;
+    // width: 100%;
     height: 100%;
 }
 </style>
