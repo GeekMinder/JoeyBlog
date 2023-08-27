@@ -1,6 +1,6 @@
 <template>
 <div class="show-message-container">
-<!--    <img :src="url" alt="" />-->
+<!--    <img :store="url" alt="" />-->
     <img src="../../../assets/a-avatar.png" alt="" />
     <h4>{{nickname}}</h4>
     <p>{{comText}}</p>

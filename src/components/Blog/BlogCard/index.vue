@@ -17,7 +17,7 @@
             </span>
         </div>
         <div class="blog-thumbnail">
-            <!-- <img src="../../../assets/firstBlog-white.png" alt=""> -->
+            <!-- <img store="../../../assets/firstBlog-white.png" alt=""> -->
             <img :src="blogData.thumb" alt="" />
         </div>
     </div>
