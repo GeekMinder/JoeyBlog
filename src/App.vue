@@ -1,16 +1,16 @@
 <template>
-    <div id="app-container">
-        <Layout>
-            <template #left>
-                <div class="personal-profile">
-                    <PersonalProfileContainer />
-                </div>
-            </template>
-            <template #right>
-                <RouterView />
-            </template>
-        </Layout>
-    </div>
+  <div id="app-container">
+    <Layout>
+      <template #left>
+        <div class="personal-profile">
+          <PersonalProfileContainer />
+        </div>
+      </template>
+      <template #right>
+        <RouterView />
+      </template>
+    </Layout>
+  </div>
 </template>
 
 <script>
@@ -18,10 +18,10 @@ import Layout from "@/components/Layout/index.vue";
 import PersonalProfileContainer from "@/components/PersonalProfile/index.vue";
 
 export default {
-    components: {
-        Layout,
-        PersonalProfileContainer,
-    },
+  components: {
+    Layout,
+    PersonalProfileContainer,
+  },
 };
 </script>
 
@@ -29,11 +29,11 @@ export default {
 @import "~@/styles/mixin.less";
 
 #app-container {
-    .self-fill(fixed);
+  .self-fill(fixed);
 }
 
 .personal-profile {
-    // width: 100%;
-    height: 100%;
+  // width: 100%;
+  height: 100%;
 }
 </style>
